@@ -1,0 +1,6 @@
+recursive: true
+require: 'ts-node/register'
+exit: true
+reporter: mocha-sonarqube-reporter
+reporter-option:
+  - 'output=unittest-sonar.xml'

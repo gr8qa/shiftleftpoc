@@ -1,0 +1,41 @@
+pipeline {
+    parameters {
+        booleanParam(defaultValue: false, description: 'Do SonarQube analysis', name: 'runSonarQube')
+    }
+    stages {
+        stage('Build') {
+            step {
+                sh 'yarn install'
+                sh 'yarn build'
+            }
+        }
+
+        stage('Run unit tests') {
+            step {
+                sh 'yarn test'
+            }
+        }
+
+        stage('Analyze SonarQube') {
+            when {
+                expression {
+                    param.runSonarQube == true
+                }
+            }
+            step {
+                echo "TBD"
+            }
+        }
+
+        stage('Check quality gate') {
+            when {
+                expression {
+                    param.runSonarQube == true
+                }
+            }
+            step {
+                echo "TBD"
+            }
+        }
+    }
+}
