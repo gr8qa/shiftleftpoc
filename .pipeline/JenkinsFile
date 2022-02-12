@@ -16,14 +16,14 @@ pipeline {
         stage('Run unit tests') {
             steps {
                 bat 'yarn test'
-                junit allowEmptyResults: true, keepLongStdio: true, testResults: 'unittest-sonar.xml'
+                xunit([JUnit(excludesPattern: '', pattern: 'results/*.xml', stopProcessingIfError: true)])
             }
         }
 
         stage('Analyze SonarQube') {
             when {
                 expression {
-                    param.runSonarQube == true
+                    params.runSonarQube == true
                 }
             }
             steps {
@@ -34,7 +34,7 @@ pipeline {
         stage('Check quality gate') {
             when {
                 expression {
-                    param.runSonarQube == true
+                    params.runSonarQube == true
                 }
             }
             steps {

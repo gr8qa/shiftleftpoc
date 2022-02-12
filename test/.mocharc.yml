@@ -1,6 +1,6 @@
 recursive: true
 require: 'ts-node/register'
 exit: true
-reporter: mocha-sonarqube-reporter
+reporter: mocha-junit-reporter
 reporter-option:
-  - 'output=results/unittest-sonar.xml'
+  - 'mochaFile=results/unittest-junit.xml'

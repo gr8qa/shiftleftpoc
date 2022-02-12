@@ -103,5 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-# Sonar results xml
-unittest-sonar.xml
+# test results xml
+results/*.xml
+xunit.xml
