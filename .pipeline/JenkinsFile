@@ -16,6 +16,7 @@ pipeline {
         stage('Run unit tests') {
             steps {
                 bat 'yarn test'
+                junit allowEmptyResults: true, keepLongStdio: true, testResults: 'unittest-sonar.xml'
             }
         }
 
