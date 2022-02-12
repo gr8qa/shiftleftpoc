@@ -21,8 +21,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "npx nyc mocha --colors --config ./test/.mocharc.yml ./test/*.ts --reporter=spec",
+    "test": "npx nyc mocha --colors --config ./test/.mocharc.yml ./test/*.ts --reporter=mocha-sonarqube-reporter",
     "test2": "npx nyc mocha --reporter=lcov --colors --config ./test/.mocharc.yml ./test/*.ts"
-    
+
   }
 }
