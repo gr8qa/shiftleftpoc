@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "npx nyc mocha --colors --config ./test/.mocharc.yml ./test/*.ts --reporter=mocha-multi-reporters --reporterOptions configFile=config.json",
+    "test": "npx nyc --reporter=lcov mocha --colors --config ./test/.mocharc.yml ./test/*.ts --reporter=mocha-multi-reporters --reporterOptions configFile=config.json",
     "test2": "npx nyc mocha --reporter=lcov --colors --config ./test/.mocharc.yml ./test/*.ts"
   }
 }
