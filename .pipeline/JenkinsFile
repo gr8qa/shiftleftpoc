@@ -28,7 +28,8 @@ pipeline {
                 }
             }
             steps {
-                echo "TBD"
+                echo "***** Run SonarQube Analysis *****"
+                bat 'yarn sonar'
             }
         }
 
@@ -39,7 +40,7 @@ pipeline {
                 }
             }
             steps {
-                echo "TBD"
+                echo "***** Run SonarQube Analysis *****"
             }
         }
     }

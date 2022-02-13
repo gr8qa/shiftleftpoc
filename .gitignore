@@ -106,3 +106,5 @@ dist
 # test results xml
 results/*.xml
 xunit.xml
+
+.scannerwork/
