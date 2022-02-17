@@ -31,11 +31,11 @@ class NotesCollectionTest {
     /***********************************************************
         Comment out the following function for SonarQube demo
     ************************************************************/
-    // @test
-    // testRemoveNote() {
-    //     let title = 'second note';
-    //     this.collection.removeNote(title);
-    //     expect(this.collection.findNote(title)).to.be.undefined;
-    // }
+    @test
+    testRemoveNote() {
+        let title = 'second note';
+        this.collection.removeNote(title);
+        expect(this.collection.findNote(title)).to.be.undefined;
+    }
 
 }
