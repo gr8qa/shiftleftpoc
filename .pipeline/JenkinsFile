@@ -29,7 +29,9 @@ pipeline {
             }
             steps {
                 echo "***** Run SonarQube Analysis *****"
-                bat 'yarn sonar'
+                withSonarQubeEnv('SonarQube Local') {
+                    bat 'yarn sonar'
+                }
             }
         }
 
