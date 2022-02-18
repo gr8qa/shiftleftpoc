@@ -3,6 +3,7 @@ import { suite, test } from "@testdeck/mocha";
 import { expect } from "chai";
 
 @suite
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class NotesCollectionTest {
     private collection: NotesCollection;
 
