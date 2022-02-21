@@ -26,16 +26,16 @@ class NotesCollectionTest {
     /***********************************************************
         Comment out the following function for SonarQube demo
     ************************************************************/
-    // @test
-    // testAddDuplicateNote() {
-    //     let notes = this.collection.addNote('first note', 'duplicate note');
-    //     expect(notes.length).to.equal(2);
-    // }
-    //
-    // @test
-    // testRemoveNote() {
-    //     let title = 'second note';
-    //     this.collection.removeNote(title);
-    //     expect(this.collection.findNote(title)).to.be.undefined;
-    // }
+    @test
+    testAddDuplicateNote() {
+        let notes = this.collection.addNote('first note', 'duplicate note');
+        expect(notes.length).to.equal(2);
+    }
+    
+    @test
+    testRemoveNote() {
+        let title = 'second note';
+        this.collection.removeNote(title);
+        expect(this.collection.findNote(title)).to.be.undefined;
+    }
 }
