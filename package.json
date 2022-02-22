@@ -29,5 +29,6 @@
     "lint": "eslint . --ext .ts",
     "test": "npx nyc --reporter=lcov mocha --colors --config ./test/.mocharc.yml ./test/*.ts --reporter=mocha-multi-reporters --reporterOptions configFile=config.json",
     "sonar": "sonar-scanner"
-  }
+  },
+  "main": "index.js"
 }
